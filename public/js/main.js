@@ -10,3 +10,19 @@ campo.on("input", () => {
   $("#contador-caracteres").text(numerosCaracteres);
   $("#contados-palavras").text(campo.val().split(/\S+/).length - 1)
 });
+
+let tempoRestante = $("#tempo-digitacao").text();
+
+campo.one("focus", () => {
+  const cronometro = setInterval(() => {
+    if (tempoRestante <= 1) {
+      campo.attr("disabled", true);
+      clearInterval(cronometro);
+    }
+
+    tempoRestante--;
+
+    $("#tempo-digitacao").text(tempoRestante);
+
+  }, 1000);
+});
