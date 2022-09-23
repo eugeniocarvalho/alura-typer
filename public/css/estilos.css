@@ -2,3 +2,26 @@ body {
   background-color: #2a2a2a;
   color: #f2f2f2;
 }
+
+.frase {
+  font-size: 20px;
+  text-align: left;
+}
+
+.campo-digitacao {
+  font-size: 20px;
+  height: 150px;
+}
+
+#botao-reinciar {
+  color: #2a2a2a;
+}
+
+.campo-desativado {
+  background-color: #bebebe;
+}
+
+.icone {
+  vertical-align: middle;
+  margin-right: 5px;
+}

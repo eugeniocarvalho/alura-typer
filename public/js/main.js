@@ -6,7 +6,7 @@ $(() =>{
   atualizaTamanhoFrase();
   inicializaContadores();
   inicializaConometro();
-  $("#botao-reinciar").click(reiniciaJogo);
+  $("#botao-reiniciar").click(reiniciaJogo);
 
 });
 
@@ -34,6 +34,7 @@ function inicializaConometro() {
     const cronometro = setInterval(() => {
       if (tempoRestante <= 1) {
         campo.attr("disabled", true);
+        campo.toggleClass("campo-desativado");
         clearInterval(cronometro);
       }
 
@@ -53,4 +54,5 @@ function reiniciaJogo() {
   $("#contador-caracteres").text("0");
   $("#contador-palavras").text("0");
   inicializaConometro();
+  campo.toggleClass("campo-desativado");
 }

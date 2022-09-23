@@ -5,25 +5,33 @@
   <meta charset="UTF-8">
   <title>Alura Typer</title>
   <link rel="stylesheet" href="css/estilos.css">
+  <link rel="stylesheet" href="css/libs/materialize.min.css">
+  <link rel="stylesheet" href="css/libs/google-fonts.css">
 </head>
 
 <body>
-  <!-- Seja bem vindo ao curso de jQuery :) -->
-  <h1>Alura Typer</h1>
-  <p class="frase">Epa meu amigo. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Odio possimus, id quos asperiores culpa hic. Iusto maxime expedita praesentium dignissimos architecto dolores nostrum. Culpa velit temporibus, numquam commodi expedita blanditiis.</p>
+  <div class="container">
 
-  <ul class="informacoes">
-    <li><span id="tamanho-frase"></span> palavras</li>
-    <li><span id="tempo-digitacao">3</span> segundos</li>
-  </ul>
+    <h1 class="center">Alura Typer</h1>
+    <p class="frase">Epa meu amigo. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Odio possimus, id quos
+      asperiores culpa hic. Iusto maxime expedita praesentium dignissimos architecto dolores nostrum. Culpa velit
+      temporibus, numquam commodi expedita blanditiis.</p>
 
-  <textarea class="campo-digitacao" cols="40" rows="12"></textarea>
-  <button id="botao-reinciar">Reiniciar jogo</button>
+    <ul class="informacoes center">
+      <li><i class="small material-icons icone">description</i><span id="tamanho-frase"></span> palavras</li>
+      <li><i class="small material-icons icone">query_builder</i><span id="tempo-digitacao">3</span> segundos</li>
+    </ul>
 
-  <ul>
-    <li><span id="contador-caracteres">0</span> caracteres</li>
-    <li><span id="contador-palavras">0</span> palavras</li>
-  </ul>
+    <textarea class="campo-digitacao" cols="40" rows="12"></textarea>
+    <div class="botao">
+      <a class="btn-floating btn-large waves-effect waves-light red" id="botao-reiniciar"><i class="material-icons">restore</i></a>
+    </div>
+
+    <ul class="center">
+      <li><span id="contador-caracteres">0</span> caracteres</li>
+      <li><span id="contador-palavras">0</span> palavras</li>
+    </ul>
+  </div>
 
   <script src="js/jquery.js"></script>
   <script src="js/main.js"></script>
