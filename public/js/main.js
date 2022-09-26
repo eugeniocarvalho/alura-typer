@@ -16,7 +16,7 @@ $(() => {
 
 function atualizaTamanhoFrase() {
   const numeroFrase = $(".frase").text().split(/\S+/).length;
-  $("#tamanho-frase").text(numeroFrase);
+  $("#tamanho-frase").text(numeroFrase - 1);
 }
 
 
@@ -55,25 +55,31 @@ function inicializaConometro() {
   campo.one("focus", () => {
     const cronometro = setInterval(() => {
       if (tempoRestante <= 1) {
-        campo.attr("disabled", true);
-        campo.toggleClass("campo-desativado");
-
         clearInterval(cronometro);
+        finalizaJogo();
       }
-
+      
       tempoRestante--;
-
+      
       $("#tempo-digitacao").text(tempoRestante);
-
+      
     }, 1000);
   });
+}
+
+
+function finalizaJogo() {
+  campo.attr("disabled", true);
+  campo.toggleClass("campo-desativado");
+  
+  inserePlacar();
 }
 
 
 function reiniciaJogo() {
   campo.val("");
   campo.attr("disabled", false);
-  campo.toggleClass("campo-desativado");
+  campo.removeClass("campo-desativado");
   campo.removeClass("borda-vermelho");
   campo.removeClass("borda-verde");
 
@@ -81,4 +87,23 @@ function reiniciaJogo() {
   $("#contador-caracteres").text("0");
   $("#contador-palavras").text("0");
   inicializaConometro();
+}
+
+
+function inserePlacar() {
+  const corpoTabela = $(".placar").find("tbody");
+  const nomeUsuario = "Eugênio";
+  const numPalavras = $("#contador-palavras").text();
+
+  const linha = `
+                <tr>
+                  <td>${nomeUsuario}</td>
+                  <td>${numPalavras} palavras</td>
+                </tr>`;
+
+  // adiciona depois
+  // corpoTabela.append(linha);
+  
+  // add antes
+  corpoTabela.prepend(linha);
 }

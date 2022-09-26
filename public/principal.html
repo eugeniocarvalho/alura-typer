@@ -13,24 +13,39 @@
   <div class="container">
 
     <h1 class="center">Alura Typer</h1>
-    <p class="frase">Epa meu amigo. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Odio possimus, id quos
-      asperiores culpa hic. Iusto maxime expedita praesentium dignissimos architecto dolores nostrum. Culpa velit
-      temporibus, numquam commodi expedita blanditiis.</p>
+    <p class="frase">Epa meu amigo. Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus eaque, distinctio
+      veritatis illo similique recusandae odio aut ex, perferendis ipsam voluptates at blanditiis sint voluptatibus
+      deleniti dolores, rerum tenetur repudiandae!</p>
 
     <ul class="informacoes center">
       <li><i class="small material-icons icone">description</i><span id="tamanho-frase"></span> palavras</li>
-      <li><i class="small material-icons icone">query_builder</i><span id="tempo-digitacao">10</span> segundos</li>
+      <li><i class="small material-icons icone">query_builder</i><span id="tempo-digitacao">4</span> segundos</li>
     </ul>
 
     <textarea class="campo-digitacao" cols="40" rows="12"></textarea>
     <div class="botao">
-      <a class="btn-floating btn-large waves-effect waves-light red" id="botao-reiniciar"><i class="material-icons">restore</i></a>
+      <a class="btn-floating btn-large waves-effect waves-light red" id="botao-reiniciar"><i
+          class="material-icons">restore</i></a>
     </div>
 
     <ul class="center">
       <li><span id="contador-caracteres">0</span> caracteres</li>
       <li><span id="contador-palavras">0</span> palavras</li>
     </ul>
+
+    <section class="placar">
+      <h3 class="center">Placar</h3>
+      <table class="centered bordered">
+        <thead>
+          <tr>
+            <th>Nome</th>
+            <th>Nº de palavras</th>
+          </tr>
+        </thead>
+        <tbody>
+        </tbody>
+      </table>
+    </section>
   </div>
 
   <script src="js/jquery.js"></script>
