@@ -1,6 +1,5 @@
-const tempoInicial = $("#tempo-digitacao").text();
+let tempoInicial = $("#tempo-digitacao").text();
 const campo = $(".campo-digitacao");
-const frase = $(".frase").text();
 
 
 // igual a $(document).ready()
@@ -10,8 +9,13 @@ $(() => {
   inicializaConometro();
   inicializaMarcadores();
   $("#botao-reiniciar").click(reiniciaJogo);
-
 });
+
+
+function atualizaTempoInicial(novoTempo) {
+  tempoInicial = novoTempo;
+  $("#tempo-digitacao").text(novoTempo);
+}
 
 
 function atualizaTamanhoFrase() {
@@ -32,9 +36,10 @@ function inicializaContadores() {
 
 function inicializaMarcadores() {
   campo.on("input", function () {
+    const frase = $(".frase").text();
     const digitado = campo.val();
     const comparavel = frase.substr(0, digitado.length);
-    
+
     if (digitado == comparavel) {
       campo.removeClass("borda-vermelho");
       campo.addClass("borda-verde");
@@ -42,27 +47,26 @@ function inicializaMarcadores() {
     else {
       campo.removeClass("borda-verde");
       campo.addClass("borda-vermelho");
-      
+
     }
-    
+
   });
 }
 
-  
-function inicializaConometro() {
-  let tempoRestante = $("#tempo-digitacao").text();
 
+function inicializaConometro() {
   campo.one("focus", () => {
+    let tempoRestante = $("#tempo-digitacao").text();
     const cronometro = setInterval(() => {
       if (tempoRestante <= 1) {
         clearInterval(cronometro);
         finalizaJogo();
       }
-      
+
       tempoRestante--;
-      
+
       $("#tempo-digitacao").text(tempoRestante);
-      
+
     }, 1000);
   });
 }
@@ -71,7 +75,7 @@ function inicializaConometro() {
 function finalizaJogo() {
   campo.attr("disabled", true);
   campo.toggleClass("campo-desativado");
-  
+
   inserePlacar();
 }
 

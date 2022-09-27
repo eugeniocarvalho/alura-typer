@@ -11,6 +11,8 @@ var frases = [
 	{_id: 7, texto:'Software em funcionamento mais que documentação abrangente.', tempo: 10 },
 	{_id: 8, texto:'Iterar é humano, recursão é divino.', tempo: 7},
 	{_id: 9, texto:'Existem três jeitos de desenvolver software. O jeito certo, o jeito errado e o meu jeito, que é igual o jeito errado só que mais rápido.', tempo: 20},
+	{_id: 10, texto:'Se você busca muito alguma coisa, é certo que deixará outras no meio do caminho.', tempo: 20},
+	{_id: 11, texto:'Escute, esse é o conselho de um velho: O ódio é o lugar para onde vai o homem que não é capaz de suportar a tristeza.', tempo: 20},
 
 	];
 
