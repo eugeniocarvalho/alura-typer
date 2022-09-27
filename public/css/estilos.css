@@ -1,6 +1,7 @@
 body {
   background-color: #2a2a2a;
   color: #f2f2f2;
+  overflow: scroll;
 }
 
 .frase {
@@ -35,4 +36,8 @@ body {
 
 .borda-vermelho {
   border: 3px solid rgb(213, 27, 27);
+}
+
+.placar {
+  display: none;
 }
