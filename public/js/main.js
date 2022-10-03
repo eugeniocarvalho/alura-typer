@@ -16,6 +16,21 @@ $(() => {
     sortField: "text",
   });
 
+  $('.tooltip').tooltipster({
+    animation: 'fade',
+    delay: 200,
+    theme: 'tooltipster-punk',
+    touchDevices: false,
+    trigger: 'hover'
+  });
+
+  $('.tooltip2').tooltipster({
+    animation: 'fade',
+    delay: 200,
+    theme: 'tooltipster-punk',
+    touchDevices: false,
+    trigger: 'custom'
+  });
 });
 
 
