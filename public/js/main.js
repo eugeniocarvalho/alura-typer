@@ -9,6 +9,7 @@ $(() => {
   inicializaConometro();
   inicializaMarcadores();
   $("#botao-reiniciar").click(reiniciaJogo);
+  atualizaPlacar();
 });
 
 
