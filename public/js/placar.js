@@ -4,7 +4,7 @@ $("#botao-sync").click(sincronizaPlacar);
 
 function inserePlacar() {
   const corpoTabela = $(".placar").find("tbody");
-  const nomeUsuario = "Eugênio";
+  const nomeUsuario = $("#jogadores").val();
   const numPalavras = $("#contador-palavras").text();
 
   const linha = novaLinha(nomeUsuario, numPalavras);
@@ -99,7 +99,7 @@ function atualizaPlacar() {
   $.get("http://localhost:3000/placar", function (data) {
     $(data).each(function () {
       const linha = novaLinha(this.usuario, this.pontos);
-      
+
       linha.find(".botao-remover").click(removeLinha);
 
       $("tbody").append(linha);

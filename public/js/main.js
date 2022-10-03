@@ -8,8 +8,14 @@ $(() => {
   inicializaContadores();
   inicializaConometro();
   inicializaMarcadores();
-  $("#botao-reiniciar").click(reiniciaJogo);
+  $("#botao-reiniciar").on("click", reiniciaJogo);
   atualizaPlacar();
+
+  $("#jogadores").selectize({
+    create: true,
+    sortField: "text",
+  });
+
 });
 
 
