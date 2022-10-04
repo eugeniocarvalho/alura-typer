@@ -12,3 +12,16 @@
   <li> Aprenda boas práticas no uso do jQuery e do Javascript
   <li> Crie um jogo do zero enquanto aprende jQuery
 </ul>
+
+<br>
+<br>
+
+# Curso de jQuery: avance na biblioteca mais popular do mercado parte 2
+
+## Conteúdo visto:
+
+- Aprenda a trabalhar com as animações nativas do jQuery
+- Domine as funções de AJAX do jQuery
+- Aprenda a buscar e enviar dados de modo assíncrono para um servidor Web
+- Entenda como funcionam os plugins externos e como incorporá-los ao seu projeto
+- Trate os erros mais comuns de AJAX e melhore a experiência do seu usuário.
