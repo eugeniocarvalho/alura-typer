@@ -25,3 +25,33 @@
 - Aprenda a buscar e enviar dados de modo assíncrono para um servidor Web
 - Entenda como funcionam os plugins externos e como incorporá-los ao seu projeto
 - Trate os erros mais comuns de AJAX e melhore a experiência do seu usuário.
+
+<br>
+<br>
+
+# Como utilizar o projeto
+Necessário ter o node e o gerenciador de pacotes npm 
+
+link para instalação clique <a href="https://rockcontent.com/br/blog/npm/#3">aqui</a>.abs
+
+<br>
+
+Navegue até a pasta servidor do projeto
+``` 
+cd servidor/
+```
+Iniciar o servidor
+``` 
+npm start
+```
+
+Abrir no navegador o link
+
+http://localhost:3000/principal.html
+
+<br>
+<br>
+
+# Preview
+
+<img src="preview.png">
