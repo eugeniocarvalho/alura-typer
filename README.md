@@ -32,7 +32,7 @@
 # Como utilizar o projeto
 Necessário ter o node e o gerenciador de pacotes npm 
 
-link para instalação clique <a href="https://rockcontent.com/br/blog/npm/#3">aqui</a>.abs
+link para instalação clique <a href="https://rockcontent.com/br/blog/npm/#3">aqui</a>.
 
 <br>
 
